@@ -10,7 +10,7 @@ const Update = () => {
       const formData = { title, blog };
       console.log(formData);
 
-      fetch(`http://localhost:5000/blog/${data._id}`, {
+      fetch(`https://blog-server-olive.vercel.app/blog/${data._id}`, {
         method: "put",
         headers: {
           "Content-Type": "application/json",

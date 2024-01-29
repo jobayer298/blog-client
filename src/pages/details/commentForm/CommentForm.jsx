@@ -12,7 +12,7 @@ const CommentForm = ({ data, setRender }) => {
     const formData = { blogID, commentID, name, email, comment };
     console.log(formData);
 
-    fetch("http://localhost:5000/comments", {
+    fetch("https://blog-server-olive.vercel.app/comments", {
       method: "POST",
       headers: {
         "content-type": "application/json",

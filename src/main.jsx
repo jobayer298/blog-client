@@ -30,13 +30,13 @@ const router = createBrowserRouter([
         path: "details/:id",
         element: <Details />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/blog/${params.id}`),
+          fetch(`https://blog-server-olive.vercel.app/blog/${params.id}`),
       },
       {
         path: "update/:id",
         element: <Update />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/blog/${params.id}`),
+          fetch(`https://blog-server-olive.vercel.app/blog/${params.id}`),
       },
     ],
   },

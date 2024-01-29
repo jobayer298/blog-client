@@ -17,7 +17,7 @@ const Comments = ({ triggerRender, _id, setRender }) => {
       console.log(_id);
     };
     const getCommentsFromDatabase = () => {
-      fetch("http://localhost:5000/comments")
+      fetch("https://blog-server-olive.vercel.app/comments")
         .then((res) => res.json())
         .then((data) => {
           console.log("from db", data);
@@ -39,7 +39,7 @@ const Comments = ({ triggerRender, _id, setRender }) => {
     }
   }, [triggerRender, _id]);
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/comment/${id}`, {
+    fetch(`https://blog-server-olive.vercel.app/comment/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

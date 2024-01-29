@@ -12,7 +12,7 @@ const AddBlog = () => {
     const formData = { userID, title, blog };
     console.log(formData);
 
-    fetch("http://localhost:5000/allBlogs", {
+    fetch("https://blog-server-olive.vercel.app/allBlogs", {
       method: "POST",
       headers: {
         "content-type": "application/json",

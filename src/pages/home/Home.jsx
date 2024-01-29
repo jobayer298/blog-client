@@ -21,12 +21,12 @@ const Home = () => {
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
   useEffect(() => {
-    fetch("http://localhost:5000/allBlogs")
+    fetch("https://blog-server-olive.vercel.app/allBlogs")
       .then((res) => res.json())
       .then((data) => setBlogData(data));
   }, []);
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/blog/${id}`, {
+    fetch(`https://blog-server-olive.vercel.app/blog/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
