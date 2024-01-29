@@ -9,7 +9,7 @@ const AddBlog = () => {
     const title = e.target.title.value;
     const blog = e.target.blog.value;
     const userID = generateUserID();
-    const formData = { title, blog, userID };
+    const formData = { userID, title, blog };
     console.log(formData);
 
     fetch("http://localhost:5000/allBlogs", {

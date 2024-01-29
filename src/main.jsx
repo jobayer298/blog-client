@@ -7,6 +7,7 @@ import Home from "./pages/home/Home";
 import AddBlog from "./pages/addBlog/AddBlog";
 import Details from "./pages/details/Details";
 import Update from "./pages/update/Update";
+import Favorite from "./pages/favorite/Favorite";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "addBlog",
         element: <AddBlog />,
+      },
+      {
+        path: "favorite",
+        element: <Favorite />,
       },
       {
         path: "details/:id",

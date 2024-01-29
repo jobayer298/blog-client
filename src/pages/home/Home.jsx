@@ -33,15 +33,17 @@ const Home = () => {
       .then((data) => {
         console.log(data);
         if (data.deletedCount > 0) {
-          alert("Recipe deleted");
+          alert("blog deleted");
         }
       })
       .catch((error) => {
         console.log(error);
       });
-    const updateRecipe = blogData.filter((item) => item._id !== id);
-    setBlogData(updateRecipe);
+    const updateBlog = blogData.filter((item) => item._id !== id);
+    setBlogData(updateBlog);
+    localStorage.setItem("favorites", JSON.stringify(updateBlog));
   };
+  console.log(blogData);
   return (
     <div className="container mx-auto my-10">
       <Title title="All Blog" />
@@ -85,9 +87,14 @@ const Home = () => {
           </tbody>
         </table>
       ) : (
-        <h1 className="text-red-500 font-bold text-3xl text-center">
-          there is no blog
-        </h1>
+        <div className="text-center">
+          <h1 className="text-red-500 font-bold text-3xl text-center">
+            there is no blog
+          </h1>
+          <Link to="/addBlog">
+            <button className="py-3 px-7 rounded-md text-white font-bold bg-blue-600 mt-5">Add Blog</button>
+          </Link>
+        </div>
       )}
     </div>
   );

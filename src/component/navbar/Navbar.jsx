@@ -4,6 +4,7 @@ const Navbar = () => {
   const data = [
     { text: "home", url: "/" },
     { text: "add blog", url: "/addBlog" },
+    { text: "favorite", url: "/favorite" },
   ];
   return (
     <div className="bg-slate-100 shadow-sm py-3 sticky top-0 z-50">
