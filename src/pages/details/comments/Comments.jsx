@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaEdit, FaTrash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaTrash } from "react-icons/fa";
 
 const Comments = ({ triggerRender, _id, setRender }) => {
   const [comments, setComments] = useState([]);
@@ -79,9 +78,6 @@ const Comments = ({ triggerRender, _id, setRender }) => {
                 <span className="text-sm font-normal">({comment.email})</span>
               </h3>
               <p className="flex items-center gap-2">
-                <Link to={`/update/${comment._id}`}>
-                  <FaEdit />
-                </Link>
                 <FaTrash
                   onClick={() => handleDelete(comment.commentID)}
                   className="text-red-500 cursor-pointer"
